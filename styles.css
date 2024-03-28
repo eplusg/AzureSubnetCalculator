@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333;
+  background-color: #f7f7f7; /* Softer background color */
+}
+
+h1 {
+  font-size: 20pt;
+  color: #333;
+}
+
+p, .label {
+  font-size: 80%;
+}
+
+input[type="text"], input[type="submit"], input[type="button"] {
+  font-family: 'Roboto', Arial, sans-serif;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  border: 1px solid #cccccc; /* Softer border color */
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+input[type="submit"], input[type="button"] {
+  background-color: #4db8ff; /* Softer blue */
+  color: white;
+  border: none;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: #47a3ff; /* Slightly darker blue on hover */
+}
+
+.calc {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85em;
+  background-color: white;
+}
+
+.calc td, .calc th {
+  border: 1px solid #e6e6e6; /* Lighter border color for cells */
+  padding: 4px 8px;
+  line-height: 1.1;
+}
+
+.calc tr {
+  height: auto;
+}
+
+.calc thead {
+  background-color: #bfdfff; /* Softer header background color */
+  color: #333; /* Dark text for contrast */
+}
+
+.calc th {
+  padding: 8px;
+}
+
+a, a:visited {
+  color: #666; /* Softer link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.disabledAction {
+  color: #bbb;
+}
+
+.maskSpan, .maskSpanJoinable {
+  background-color: #e6f2ff; /* Very soft blue background for interactive cells */
+  cursor: pointer;
+}
+
+td, th {
+  text-align: center;
+  vertical-align: middle;
+}
