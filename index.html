@@ -475,7 +475,6 @@ function toggleColumn(cb)
 <h1>Visual (Azure) Subnet Calculator</h1>
 <p>A subnet calculator tailored for Azure virtual networks.</p>
 <p>Enter the network you wish to subnet:</p>
-<center>
 <form name="calc" onsubmit="updateNetwork(); return false;">
 <table cellspacing="0">
 <tr>
@@ -490,9 +489,6 @@ function toggleColumn(cb)
 </td>
 </tr>
 </table>
-</form>
-</center>
-
 <p>Show columns: 
 <input type="checkbox" id="cb_subnet" checked onclick="toggleColumn(this)"><label for="cb_subnet">Subnet address</label>
 <input type="checkbox" id="cb_netmask" onclick="toggleColumn(this)"><label for="cb_netmask">Netmask</label>

@@ -1,67 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
   color: #333;
-  background-color: #f7f7f7; /* Softer background color */
 }
 
 h1 {
-  font-size: 20pt;
-  color: #333;
+  font-size: 24px;
+  color: #1a73e8; /* Google's blue */
 }
 
-p, .label {
-  font-size: 80%;
-}
-
-input[type="text"], input[type="submit"], input[type="button"] {
-  font-family: 'Roboto', Arial, sans-serif;
-  padding: 4px 8px;
-  font-size: 0.85em;
-  border: 1px solid #cccccc; /* Softer border color */
-  border-radius: 4px;
-  margin-right: 5px;
-}
-
-input[type="submit"], input[type="button"] {
-  background-color: #4db8ff; /* Softer blue */
-  color: white;
-  border: none;
-}
-
-input[type="submit"]:hover, input[type="button"]:hover {
-  background-color: #47a3ff; /* Slightly darker blue on hover */
-}
-
-.calc {
+table.calc {
   border-collapse: collapse;
   width: 100%;
-  font-size: 0.85em;
-  background-color: white;
+  max-width: 960px; /* Restrict max width for readability */
+  margin: 20px left;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.calc td, .calc th {
-  border: 1px solid #e6e6e6; /* Lighter border color for cells */
-  padding: 4px 8px;
-  line-height: 1.1;
-}
-
-.calc tr {
-  height: auto;
-}
-
-.calc thead {
-  background-color: #bfdfff; /* Softer header background color */
-  color: #333; /* Dark text for contrast */
+.calc th, .calc td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
 .calc th {
-  padding: 8px;
+  background-color: #f8f9fa;
+  color: #202124;
 }
 
+.calc tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.calc tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.calc tbody tr:hover {
+  background-color: #e8f0fe;
+}
+
+input[type='text'], input[type='submit'], input[type='button'] {
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px;
+  margin-right: 8px;
+}
+
+input[type='submit'], input[type='button'] {
+  background-color: #1a73e8;
+  color: white;
+  cursor: pointer;
+}
+
+input[type='submit']:hover, input[type='button']:hover {
+  background-color: #1669d8;
+}
+
+/* Additional responsiveness for smaller screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .calc th, .calc td {
+    padding: 8px;
+  }
+
+  input[type='text'], input[type='submit'], input[type='button'] {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Subnet table scrolling on small screens */
+@media (max-width: 800px) {
+  .calc-container {
+    overflow-x: auto;
+  }
+}
+
+/* Styling for checkboxes to toggle columns */
+.checkbox-label {
+  display: inline-block;
+  margin-right: 10px;
+  color: #202124;
+  font-size: 16px;
+}
+
+/* Use Flexbox for layout improvements */
+.form-container, .checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-container {
+  justify-content: start;
+}
+
+/* Hyperlink styling */
 a, a:visited {
-  color: #666; /* Softer link color */
+  color: #1a73e8;
   text-decoration: none;
 }
 
@@ -69,16 +118,9 @@ a:hover {
   text-decoration: underline;
 }
 
-.disabledAction {
-  color: #bbb;
-}
-
-.maskSpan, .maskSpanJoinable {
-  background-color: #e6f2ff; /* Very soft blue background for interactive cells */
-  cursor: pointer;
-}
-
-td, th {
+/* Add a footer with a subtle look */
+footer {
   text-align: center;
-  vertical-align: middle;
+  padding: 20px;
+  color: #666;
 }
