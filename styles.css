@@ -4,10 +4,11 @@ body {
   margin: 0;
   padding: 20px;
   color: #333;
+  font-size: 14px; /* Smaller base font size */
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 1.57em; /* 22px/14px */
   color: #1a73e8; /* Google's blue */
 }
 
@@ -46,7 +47,7 @@ table.calc {
 input[type='text'], input[type='submit'], input[type='button'] {
   border: 1px solid #dadce0;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 13px;
   padding: 10px;
   margin-right: 8px;
 }
